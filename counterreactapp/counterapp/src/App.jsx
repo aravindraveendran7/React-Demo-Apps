@@ -7,10 +7,11 @@ function App() {
   const [count, setCount] = useState(5);
   const setupCounter = () => {
     setCount(count + 1);
+    setCount(count + 1);
   };
   return (
     <>
-      <h1>React app counter</h1>
+      <h1>React app counter:{count}</h1>
       <button onClick={setupCounter}>Increment counter:{count}</button>
     </>
   );
