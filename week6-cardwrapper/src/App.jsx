@@ -6,8 +6,13 @@ import "./App.css";
 function App() {
   return (
     <>
+      {/* simple passing the text */}
       <CardWrapper>Hello Hi there</CardWrapper>
-      <CardWrapper>Hello,am the second </CardWrapper>
+
+      {/* passing a component as such inside the wrapper */}
+      <CardWrapper>
+        <TextComponent />
+      </CardWrapper>
     </>
   );
 }
@@ -26,6 +31,10 @@ function CardWrapper({ children }) {
       {children}
     </div>
   );
+}
+
+function TextComponent() {
+  return <p>Hi from the TextComponent</p>;
 }
 
 export default App;
