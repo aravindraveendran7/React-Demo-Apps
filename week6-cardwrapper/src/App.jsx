@@ -5,15 +5,19 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      {/* simple passing the text */}
-      <CardWrapper>Hello Hi there</CardWrapper>
-
-      {/* passing a component as such inside the wrapper */}
+    <div
+      style={{
+        display: "flex",
+        gap: "10px",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <CardWrapper>Hello There</CardWrapper>
       <CardWrapper>
         <TextComponent />
       </CardWrapper>
-    </>
+    </div>
   );
 }
 
@@ -26,6 +30,8 @@ function CardWrapper({ children }) {
         backgroundColor: "yellow",
         marginBottom: "10px",
         borderRadius: "5px",
+        fontFamily: "sans-serif",
+        fontWeight: "bold",
       }}
     >
       {children}
