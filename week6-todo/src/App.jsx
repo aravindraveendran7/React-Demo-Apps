@@ -40,11 +40,13 @@ function App() {
         Add ToDo
       </button>
       {todos.map((todo) => (
-        <Todo
-          key={todo.id}
-          title={todo.title}
-          description={todo.description}
-        ></Todo>
+        <CardComponent>
+          <Todo
+            key={todo.id}
+            title={todo.title}
+            description={todo.description}
+          ></Todo>
+        </CardComponent>
       ))}
     </>
   );
@@ -53,9 +55,37 @@ function App() {
 function Todo({ title, description }) {
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h1
+        style={{
+          background: "#EDE5BD",
+          padding: "10px",
+          marginLeft: "50px",
+          marginRight: "50px",
+          borderRadius: "5px",
+          border: "2px solid black",
+        }}
+      >
+        {title}
+      </h1>
+      <p
+        style={{
+          background: "#D3EDBD",
+          padding: "10px",
+          marginLeft: "50px",
+          marginRight: "50px",
+          borderRadius: "5px",
+          border: "2px solid black",
+        }}
+      >
+        {description}
+      </p>
     </div>
+  );
+}
+
+function CardComponent({ children }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column" }}>{children}</div>
   );
 }
 
