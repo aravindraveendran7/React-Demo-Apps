@@ -6,28 +6,33 @@ import { useEffect } from "react";
 import axios from "axios";
 
 function App() {
+  const [buttonState, setButtonState] = useState(1);
   return (
     <>
       <div>
-        <Todo id={"11"}></Todo>
+        <button onClick={() => setButtonState(1)}>1</button>
+        <button onClick={() => setButtonState(2)}>2</button>
+        <button onClick={() => setButtonState(3)}>3</button>
+        <button onClick={() => setButtonState(4)}>4</button>
+
+        <Todo id={buttonState}></Todo>
       </div>
     </>
   );
 }
 
-//while using axios to get the response we use response.data.The data after it is the root node of the json object recieved.
+//while using axios to get the response we use response.data.
 function Todo({ id }) {
   const [user, setUser] = useState({});
-
   useEffect(() => {
-    axios.get(`https://reqres.in/api/users/${id}`).then((response) => {
-      setUser(response.data.data);
+    axios.get(`https://dummyjson.com/products/${id}`).then((response) => {
+      setUser(response.data);
     });
-  }, []);
+  }, [id]);
   return (
     <div>
-      <h1>{user.email}</h1>
-      <h2>{user.last_name}</h2>
+      <h1>{user.title}</h1>
+      <h2>{user.description}</h2>
     </div>
   );
 }
