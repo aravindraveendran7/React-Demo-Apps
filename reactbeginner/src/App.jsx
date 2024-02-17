@@ -6,8 +6,12 @@ import BioPage from "./components/Biopage";
 import { Variables } from "./components/Variables";
 import { UsingMap } from "./components/UsingMap";
 import { UseProps } from "./components/UsingProps";
-import { UsingUseState } from "./components/UsingUseState";
+import { UpdatingArrayState } from "./components/UpdatingArrayState";
+import { UpdatingStringState } from "./components/UpdatingStringState";
+import { UpdatinObjectState } from "./components/UpdatinObjectState";
+import { UpdatingArrayOfObjectsState } from "./components/UpdatingArrayOfObjectsState";
 
+//uncomment components to see the changes.For
 function App() {
   return (
     <>
@@ -20,9 +24,10 @@ function App() {
       {/* <Variables /> */}
       {/* <UsingMap /> */}
       {/* <Shoppingcart /> */}
-
-      {/* <UsingUseState /> */}
-      <UsingUseState />
+      {/* <UpdatingArrayState /> */}
+      {/* <UpdatingStringState /> */}
+      {/* <UpdatinObjectState /> */}
+      <UpdatingArrayOfObjectsState />
     </>
   );
 }
