@@ -6,19 +6,22 @@ import BioPage from "./components/Biopage";
 import { Variables } from "./components/Variables";
 import { UsingMap } from "./components/UsingMap";
 import { UseProps } from "./components/UsingProps";
+import { UsingUseState } from "./components/UsingUseState";
 
 function App() {
   return (
     <>
-      <BioPage />
+      {/* <BioPage />
       <UseProps
         name="John Davis"
         age={18}
         hobbies={["sleeping", " ", "biking"]}
-      />
+      /> */}
       {/* <Variables /> */}
       {/* <UsingMap /> */}
       {/* <Shoppingcart /> */}
+
+      <UsingUseState />
     </>
   );
 }
